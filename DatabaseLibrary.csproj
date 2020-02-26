@@ -1,11 +1,22 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>JK.DatabaseManager</PackageId>
+    <Authors>Jongkwan</Authors>
+    <Product>DatabaseManager</Product>
+    <Description>Universial Database management library</Description>
+    <Copyright>Jongkwan</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>Project</RepositoryType>
+    <PackageTags>Database</PackageTags>
+    <PackageReleaseNotes>Begin.</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/jkff2123/DatabaseLibrary</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="2.19.60" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
   </ItemGroup>
 
 </Project>

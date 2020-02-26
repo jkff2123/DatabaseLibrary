@@ -19,3 +19,6 @@
    
   2. Get data table: Return one table.<br/>
    ex) var data - test.GetDataTable(Query);
+
+# Issue
+ 1. Oracle Controller is not tested.

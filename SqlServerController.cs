@@ -13,7 +13,7 @@ namespace DatabaseLibrary
 
         public SqlServerController()
         {
-            connection = null;
+
         }
 
         public bool Connect(string dbAddress, string dbIdentifier, string UID, string PWD)
@@ -22,11 +22,39 @@ namespace DatabaseLibrary
             {
                 return false;
             }
-            var connection_string = "Server=" + dbAddress + ";Database=" + dbIdentifier + ";UID=" + UID + ";PWD=" + PWD + ";";
-            connection = new SqlConnection(connection_string);
-            connection.Open();
 
-            return true;
+            var connectionString = "Server=" + dbAddress + ";Database=" + dbIdentifier + ";UID=" + UID + ";PWD=" + PWD + ";";
+            connection = new SqlConnection(connectionString);
+
+            return CheckConnect();
+        }
+
+        public bool Connect(string connectionString)
+        {
+            if (connection != null)
+            {
+                return false;
+            }
+
+            connection = new SqlConnection(connectionString);
+
+            return CheckConnect();
+        }
+
+        private bool CheckConnect()
+        {
+            try
+            {
+                connection.Open();
+                connection.Close();
+
+                return true;
+            }
+            catch
+            {
+                connection = null;
+                return false;
+            }
         }
 
         private DbDataAdapter ReceiveDBAdapter(string query)
@@ -37,10 +65,19 @@ namespace DatabaseLibrary
             return new SqlDataAdapter(query, connection);
         }
 
+        private SqlCommand ReceiveSqlCommand(string query)
+        {
+            if (connection == null)
+                return null;
+
+            return new SqlCommand(query, connection);
+        }
+
         public DataSet GetDataSet(string query)
         {
             try
             {
+                connection.Open();
                 var result = new DataSet();
                 var dataAdapter = ReceiveDBAdapter(query);
                 dataAdapter.Fill(result);
@@ -51,12 +88,17 @@ namespace DatabaseLibrary
             {
                 return null;
             }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         public DataTable GetDataTable(string query)
         {
             try
             {
+                connection.Open();
                 var result = new DataTable();
                 var dataAdapter = ReceiveDBAdapter(query);
                 dataAdapter.Fill(result);
@@ -67,23 +109,29 @@ namespace DatabaseLibrary
             {
                 return null;
             }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         public int SendQuery(string query)
         {
             try
             {
-                if (connection == null)
-                    return 0;
-
-                var command = new SqlCommand(query, connection);
-                var result = command.ExecuteNonQuery();
+                connection.Open();
+                var sqlCommand = ReceiveSqlCommand(query);
+                var result = sqlCommand.ExecuteNonQuery();
 
                 return result;
             }
             catch
             {
                 return 0;
+            }
+            finally
+            {
+                connection.Close();
             }
         }
 
@@ -106,6 +154,7 @@ namespace DatabaseLibrary
                 if (connection != null)
                 {
                     connection.Close();
+                    connection.Dispose();
                 }
             }
 

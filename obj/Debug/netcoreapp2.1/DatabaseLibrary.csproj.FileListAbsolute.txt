@@ -7,3 +7,10 @@ C:\Users\jkff2\source\repos\LibraryFactory\DatabaseLibrary\obj\Debug\netcoreapp2
 C:\Users\jkff2\source\repos\LibraryFactory\DatabaseLibrary\bin\Debug\netcoreapp2.1\DatabaseLibrary.pdb
 C:\Users\jkff2\source\repos\LibraryFactory\DatabaseLibrary\obj\Debug\netcoreapp2.1\DatabaseLibrary.dll
 C:\Users\jkff2\source\repos\LibraryFactory\DatabaseLibrary\obj\Debug\netcoreapp2.1\DatabaseLibrary.pdb
+S:\Repository\LibraryFactory\DatabaseLibrary\bin\Debug\netcoreapp2.1\DatabaseLibrary.deps.json
+S:\Repository\LibraryFactory\DatabaseLibrary\bin\Debug\netcoreapp2.1\DatabaseLibrary.dll
+S:\Repository\LibraryFactory\DatabaseLibrary\bin\Debug\netcoreapp2.1\DatabaseLibrary.pdb
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Debug\netcoreapp2.1\DatabaseLibrary.AssemblyInfoInputs.cache
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Debug\netcoreapp2.1\DatabaseLibrary.AssemblyInfo.cs
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Debug\netcoreapp2.1\DatabaseLibrary.dll
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Debug\netcoreapp2.1\DatabaseLibrary.pdb

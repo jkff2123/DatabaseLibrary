@@ -28,6 +28,11 @@ namespace DatabaseLibrary
             return databaseController.Connect(dbAddress, dbIdentifier, uID, pWD);
         }
 
+        public bool Connect(string connectionString)
+        {
+            return databaseController.Connect(connectionString);
+        }
+
         /// <summary>
         /// Get data set.
         /// </summary>

@@ -1,0 +1,9 @@
+S:\Repository\LibraryFactory\DatabaseLibrary\bin\Release\netcoreapp2.1\DatabaseLibrary.deps.json
+S:\Repository\LibraryFactory\DatabaseLibrary\bin\Release\netcoreapp2.1\DatabaseLibrary.dll
+S:\Repository\LibraryFactory\DatabaseLibrary\bin\Release\netcoreapp2.1\DatabaseLibrary.pdb
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Release\netcoreapp2.1\DatabaseLibrary.csprojAssemblyReference.cache
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Release\netcoreapp2.1\DatabaseLibrary.csproj.CoreCompileInputs.cache
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Release\netcoreapp2.1\DatabaseLibrary.AssemblyInfoInputs.cache
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Release\netcoreapp2.1\DatabaseLibrary.AssemblyInfo.cs
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Release\netcoreapp2.1\DatabaseLibrary.dll
+S:\Repository\LibraryFactory\DatabaseLibrary\obj\Release\netcoreapp2.1\DatabaseLibrary.pdb
